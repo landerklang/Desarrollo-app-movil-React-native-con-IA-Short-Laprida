@@ -4,21 +4,21 @@
 
 ## ¿Qué es y qué problema resuelve? ¿Cómo logra que código JavaScript termine mostrando componentes nativos en el teléfono?
 
-Creado en Facebook y publicado en Febrero de 2015 React Native es un framework para la creación de aplicaciones nativas para iOS y Android. Para programar aplicaciones usando React Native usamos como lenguaje de programación JavaScript, en lugar de Swift, JAVA u otros lenguajes y por el resto usamos React para la creación de la interfaz del usuario. 
+Creado en Facebook y publicado en Febrero de 2015 React Native es un framework para la creación de aplicaciones nativas para iOS y Android. Para programar aplicaciones usando React Native usamos como lenguaje de programación JavaScript, en lugar de Swift, JAVA u otros lenguajes y por el resto usamos React para la creación de la interfaz del usuario.
 
-  React Native soluciona el problema de tener que crear y mantener dos aplicaciones móviles separadas (una para iOS y otra para Android). Permite a los programadores usar un solo lenguaje de programación, JavaScript, para construir aplicaciones que funcionen en ambos sistemas operativos al mismo tiempo.
+React Native soluciona el problema de tener que crear y mantener dos aplicaciones móviles separadas (una para iOS y otra para Android). Permite a los programadores usar un solo lenguaje de programación, JavaScript, para construir aplicaciones que funcionen en ambos sistemas operativos al mismo tiempo.
 
 React Native convierte tu código JavaScript en componentes móviles reales a través de un proceso llamado puente (o bridge) y un motor de JavaScript. En lugar de mostrar una página web (como hace una aplicación web móvil), la aplicación crea elementos reales del sistema operativo de tu teléfono (como iOS o Android).
 
 ## Fuentes:
+
 https://codigofacilito.com/articulos/que-es-react-native
 
 https://www.doonamis.com/react-native-que-es-ventajas-desventajas/
 
-
 ## ¿En qué se diferencia del desarrollo nativo puro (Kotlin/Swift) y de las apps híbridas basadas en web (Ionic, PWA)? Ventajas y desventajas de cada enfoque.
 
-*Una app nativa es la que se desarrolla específicamente para cada sistema operativo usando sus herramientas oficiales: Xcode con Swift para iOS, y Android Studio con Kotlin para Android. Es la opción más cara y la más lenta, pero también la que da el mejor rendimiento y la mejor experiencia de usuario.
+\*Una app nativa es la que se desarrolla específicamente para cada sistema operativo usando sus herramientas oficiales: Xcode con Swift para iOS, y Android Studio con Kotlin para Android. Es la opción más cara y la más lenta, pero también la que da el mejor rendimiento y la mejor experiencia de usuario.
 
 Ventajas:
 
@@ -29,13 +29,13 @@ Experiencia de usuario perfectamente integrada con cada sistema operativo.
 
 Mejor rendimiento en gráficos, animaciones complejas y procesos en tiempo real.
 
-Desventajas: 
+Desventajas:
 
-Coste orientativo: alto. 
+Coste orientativo: alto.
 
-Hay que desarrollar dos apps (una para iOS y otra para Android) y mantener dos bases de código en paralelo, lo que en una app de complejidad media puede suponer entre un 60 % y un 100 % más de coste frente a las otras opciones. 
+Hay que desarrollar dos apps (una para iOS y otra para Android) y mantener dos bases de código en paralelo, lo que en una app de complejidad media puede suponer entre un 60 % y un 100 % más de coste frente a las otras opciones.
 
-*Una app híbrida es esencialmente una web empaquetada dentro de un contenedor nativo. El contenido se renderiza en un WebView (un mini-navegador escondido) y se publica en las stores como si fuera una app cualquiera. Tecnologías clásicas: Cordova, PhoneGap, Ionic (en su modo WebView).
+\*Una app híbrida es esencialmente una web empaquetada dentro de un contenedor nativo. El contenido se renderiza en un WebView (un mini-navegador escondido) y se publica en las stores como si fuera una app cualquiera. Tecnologías clásicas: Cordova, PhoneGap, Ionic (en su modo WebView).
 
 Ventajas:
 
@@ -47,10 +47,9 @@ Una sola base de código para iOS y Android.
 
 Desventajas:
 
-Las apps híbridas suelen ofrecer una experiencia notablemente peor que las nativas o multiplataforma modernas. Notarás lags en las transiciones, problemas de rendimiento en listados largos y limitaciones serias para acceder a funcionalidades nativas del dispositivo. En 2026, con Flutter y React Native ya tan maduros, muy pocas empresas eligen híbrida clásica para producto profesional. 
+Las apps híbridas suelen ofrecer una experiencia notablemente peor que las nativas o multiplataforma modernas. Notarás lags en las transiciones, problemas de rendimiento en listados largos y limitaciones serias para acceder a funcionalidades nativas del dispositivo. En 2026, con Flutter y React Native ya tan maduros, muy pocas empresas eligen híbrida clásica para producto profesional.
 
-
-*Una PWA (Progressive Web App) es una web moderna con superpoderes. Funciona en cualquier navegador, pero el usuario puede «instalarla» en la pantalla de inicio del móvil sin pasar por App Store ni Google Play. Una vez instalada, se comporta como una app: funciona offline, recibe notificaciones push, se abre en pantalla completa y carga muy rápido.
+\*Una PWA (Progressive Web App) es una web moderna con superpoderes. Funciona en cualquier navegador, pero el usuario puede «instalarla» en la pantalla de inicio del móvil sin pasar por App Store ni Google Play. Una vez instalada, se comporta como una app: funciona offline, recibe notificaciones push, se abre en pantalla completa y carga muy rápido.
 
 Ventajas:
 
@@ -63,23 +62,21 @@ Sin proceso de aprobación: evitas que Apple o Google rechacen tu app por motivo
 Un solo desarrollo que funciona en iOS, Android, escritorio y cualquier dispositivo con navegador.
 SEO real: la PWA es indexable por Google, lo que la app nativa no consigue.
 
-Desventajas: 
+Desventajas:
 
 No aparece en las stores, lo que limita el descubrimiento orgánico.
 Acceso restringido a algunas funcionalidades nativas (biometría avanzada, Bluetooth LE complejo, NFC en iOS).
 La experiencia, aunque muy buena, no llega al 100 % de fluidez de una app nativa.
 
-
 ## Nombren 3 apps conocidas construidas con React Native.
 
 Apps creadas con React Native
 
-Facebook: La red social utiliza este framework, el cual fue creado por ellos mismos, para optimizar el rendimiento de sus funciones principales y mantener un desarrollo ágil en iOS y Android. 
+Facebook: La red social utiliza este framework, el cual fue creado por ellos mismos, para optimizar el rendimiento de sus funciones principales y mantener un desarrollo ágil en iOS y Android.
 
-Instagram: Implementó la tecnología para integrar código compartido entre plataformas de forma sencilla, permitiendo que funciones como las notificaciones push o la edición de perfiles se carguen de manera mucho más rápida. 
+Instagram: Implementó la tecnología para integrar código compartido entre plataformas de forma sencilla, permitiendo que funciones como las notificaciones push o la edición de perfiles se carguen de manera mucho más rápida.
 
 Discord: La famosa plataforma de comunicación construyó su aplicación móvil utilizando casi en su totalidad el mismo código tanto para iOS como para Android, logrando un rendimiento fluido y libre de errores de forma masiva.
-
 
 ## -- Expo --
 
@@ -113,15 +110,27 @@ implementación)
 ¿Qué herramientas existen? Investiguen al menos GitHub Spec Kit y una alternativa (por ejemplo Kiro).
 ¿Con qué agentes de IA funcionan
 
-## Agentes de código y skills
+## --Agentes de código y skills--
 
 ¿Qué es un agente de código (Claude Code, GitHub Copilot, Cursor, Gemini CLI) y en qué se diferencia
 de un chat común?
 
+_los agentes de código son un sistema autónomo que se encargar de editar, comprender y de ejecutar comando en la termina y de resolver tareas complejas se diferencia de un chat común es que este actúa en todo el proyecto modificando o realizando entregas soluciones empaquetada a diferencia del chat ia que se encarga de responde y redactar framentos de texto o código que el usuario le pasa_
+
+_-cita el generador de respuesta automática de google_
+
 ¿Para qué sirven los archivos de contexto como AGENTS.md o CLAUDE.md ?
+
+_Sirven principalmente para darle las instrucciones básica al agente cada ves que se inicia sesión indicando como este debe de comportarse y que información necesita saber del proyecto_
+
+_*-https://www-mindstudio-ai.translate.goog/blog/what-is-claude-md-file-ai-agents?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc*_
 
 ¿Qué son las skills de un agente? ¿Dónde se consiguen skills hechas por la comunidad y cómo se
 instalan?
+
+_las skills son paquetes modulares y instrucciones portátiles de instrucciones que amplían las capacidad de un agente permitiendo realizar tareas mas especificas, para conseguir las skills de la comunidad se consigue principalmente en plataformas y repositorios abierto distribuidos por internet como puede ser GitHub,skills.sh entre otros, para la instalación dependerá de como utilices tu agentes pero la mas sencilla es la descargarlo de forma Manuel los archivo y colocarlo en las ruta donde el agente almacena las skills_
+
+_-respuesta generada por el buscador de google de ia_
 
 ## Mocks
 
