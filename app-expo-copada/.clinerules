@@ -1,18 +1,78 @@
 # Reglas del Proyecto (Constitution) - App Catálogo SCP
 
 ## Stack Tecnológico Obligatorio
-- Framework: React Native con Expo (Expo Go).
-- Navegación: expo-router.
-- Lenguaje: TypeScript.
-- Estilos: StyleSheet de React Native (o la librería de estilos que prefieran, ej: NativeWind).
+
+- Framework: React Native con Expo (Expo Go) version 52
+- Navegación: expo-router version ~6.0.24
+- Lenguaje: TypeScript version ~5.9.2
+- Estilos: StyleSheet de React Native 52
+
+## Modelo de datos
+
+El modelos para las entidades scp debe de contener lo siguiente:
+El atributo `id` de tipo string
+El atributo `ItemNumber` de tipo (string)
+El atributo `Class` (Selector/Dropdown: Safe, Euclid, Keter, Thaumiel)
+El atributp `ContainmentProcedures` (área de texto multilinea)
+El atributo `Description` (área de texto multilinea)
+
+## HEX COLORES
+
+colores que tendra la aplicacion junto con donde se debe de utilizar
+Fondo de pantalla negro #000000
+Texto principal: Verde neón #00FF41
+Clases por color Safe #009600, Clase Euclid: #FFD700, clase Keter #FF0000,clase Thaumiel #8A2BE2
+
+## Estructura de carpeta
+
+/app
+/(tabs)/index.tsx -> Pantalla de lista (CatalogScreen)
+/[id].tsx -> Pantalla de detalle (DetailScreen)
+/create.tsx -> Pantalla de creación (CreateScreen)
+/edit/[id].tsx -> Pantalla de edición (EditScreen)
+/components
+/SCPCard.tsx -> Tarjeta para cada ítem en la lista
+/ClassificationBadge.tsx -> Etiqueta de color para la clase
+/constants
+/colors.ts -> Colores HEX centralizados
+/scpData.ts -> Array de mocks (SCPEntity[])
+/types
+/scp.ts -> Interfaz SCPEntity
+/context
+/SCPContext.tsx -> Contexto global para manejar los mocks (CRUD)
+
+## Reglas de Navegación (expo-router)
+
+- La navegación entre pantallas se hará exclusivamente con los hooks y componentes de `expo-router`:
+  - `router.push()` para ir a una nueva pantalla (ej: al pulsar una tarjeta para ir al detalle).
+  - `router.back()` para volver a la pantalla anterior (ej: tras guardar un nuevo SCP).
+  - `router.replace()` para redirigir sin guardar historial (ej: tras editar un SCP).
+  - `<Link>` para enlaces declarativos en la UI.
+- **Queda terminantemente prohibido** usar `navigation.navigate`, `useNavigation` o cualquier método importado directamente de `@react-navigation/native`. Todo debe pasar por `expo-router`.
+- Las rutas dinámicas `[id].tsx` recibirán el parámetro `id` mediante `useLocalSearchParams()`.
+
+## Validación de Formularios (CreateScreen / EditScreen)
+
+- Los campos `ItemNumber`, `Class`, `ContainmentProcedures` y `Description` son **obligatorios**.
+- Si el usuario intenta guardar y algún campo obligatorio está vacío:
+  - Se mostrará un mensaje de error con `<Text style={{ color: '#FF4444' }}>` justo debajo del campo correspondiente.
+  - El mensaje debe ser claro, ej: "Este campo es obligatorio".
+- **Queda prohibido** usar `Alert.alert()` para errores de validación de campos. Los errores deben mostrarse directamente en la UI, en la misma pantalla del formulario.
+- Solo cuando todos los campos estén correctamente rellenados, se permitirá guardar (actualizar el estado global de mocks y navegar hacia atrás).
 
 ## Restricciones Críticas (Prohibiciones)
-- NO crear ni sugerir código de Backend (Node.js, Express, Python, etc.).
-- NO configurar bases de datos reales (SQL, Firebase, MongoDB).
-- Todo el manejo de datos debe hacerse mediante MOCKS (archivos .json locales o estados en memoria usando Zustand/Context API).
-- NO instalar librerías nativas que requieran pre-build, la app debe funcionar puramente en Expo Go.
+
+Además de las restricciones técnicas (sin backend), en esta fase del proyecto NO se implementarán las siguientes funcionalidades:
+
+- **NO** habrá sistema de autenticación ni login de usuarios (los roles "Investigador" y "Administrador" son solo contexto narrativo).
+- **NO** se implementará búsqueda por filtros avanzados (ej: buscar por clase o por palabras clave en la descripción). La búsqueda en la lista será solo por `ItemNumber`.
+- **NO** se subirán imágenes reales desde la galería o cámara del dispositivo. Si se muestran imágenes, serán URLs fijas o placeholders locales.
+- **NO** habrá sistema de favoritos, puntuaciones ni comentarios.
+- **NO** se implementarán notificaciones push ni alertas locales.
+- **NO** se persistirán los datos en `AsyncStorage` ni en ningún almacenamiento local; los mocks se reinician al recargar la app.
 
 ## Convenciones de Código
+
 - Nombres de variables, funciones y componentes: en Inglés (ej: ScpList, containmentProcedure).
 - Textos de la Interfaz de Usuario (UI) y comentarios: en Español.
 - Mantener los componentes pequeños y modulares.
