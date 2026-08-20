@@ -38,4 +38,4 @@ Creá un archivo de "mocks" con datos falsos de 3 o 4 anomalías SCP para poder 
 
 Desarrollá la primera historia de usuario (HU1): la pantalla del catálogo (index.tsx) que muestre la lista de SCPs usando los mocks.
 
-Paso a paso. Mostrar que archivos vas a crear o modificar."
+Paso a paso. Mostrar que archivos vas a crear y/o modificar."
