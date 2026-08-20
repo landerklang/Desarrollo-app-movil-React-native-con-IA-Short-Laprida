@@ -23,3 +23,19 @@
 
 
 ## La spec se encuentra en el archivo SPEC.md
+
+# Pasas realizados con la ia y promps
+
+## 1. Estrucutura base y primer historia de usario (primer prompt)
+
+"Vamos a iniciar el desarrollo de la app siguiendo la metodología SDD.
+
+Primero, lee detenidamente los archivos .clinerules y SPEC.md. Confírmame que entendiste las reglas (especialmente la prohibición de usar backend real).
+
+Una vez que lo leas, empezá a crear la estructura base del proyecto para expo-router (carpeta app, _layout.tsx, etc.).
+
+Creá un archivo de "mocks" con datos falsos de 3 o 4 anomalías SCP para poder probar la app.
+
+Desarrollá la primera historia de usuario (HU1): la pantalla del catálogo (index.tsx) que muestre la lista de SCPs usando los mocks.
+
+Paso a paso. Mostrar que archivos vas a crear o modificar."
